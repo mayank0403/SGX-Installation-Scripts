@@ -46,7 +46,7 @@ parent-dir = $(patsubst %/,%,$(dir $(1:%/=%)))
 my-dir = $(realpath $(call parent-dir,$(lastword $(MAKEFILE_LIST))))
 
 ROOT_DIR	:= $(call my-dir)
-export PACKAGE_LIB := $(ROOT_DIR)/../package/lib64/
+export PACKAGE_LIB := $(ROOT_DIR)/../package/lib64
 export PACKAGE_INC := $(ROOT_DIR)/../package/include/
 export TRUSTED_LIB_DIR := $(ROOT_DIR)/libsgx_tsgxssl/
 export UNTRUSTED_LIB_DIR := $(ROOT_DIR)/libsgx_usgxssl/
